@@ -14,15 +14,20 @@ export default function Home() {
       <aside className="h-screen hidden lg:block">
         <Image src="/login.png" alt="login" width={554} height={832} />
       </aside>
-      <section className="flex flex-col gap-6">
-        <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <section className="flex flex-col w-full items-center gap-7">
+        <svg
+          width="75"
+          height="75"
+          viewBox="0 0 75 75"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <circle cx="37.5" cy="37.5" r="37.5" fill="#E11D48" />
         </svg>
 
         <h1 className="text-4xl font-extrabold uppercase">Sphere</h1>
 
         <Tabs defaultValue="entrar" className="w-[400px]">
-
           <TabsList className="grid w-full grid-cols-2">
             <TabsTrigger value="entrar">Entrar</TabsTrigger>
             <TabsTrigger value="registrar">Registrar</TabsTrigger>
@@ -31,24 +36,43 @@ export default function Home() {
           <TabsContent value="entrar">
             <form action="" className="space-y-8 p-4">
               <div>
-                <Label htmlFor="email">email</Label>
+                <Label htmlFor="email">Email</Label>
                 <Input id="email" />
               </div>
               <div>
-                <Label htmlFor="senha">senha</Label>
+                <Label htmlFor="senha">Senha</Label>
                 <Input id="senha" type="password" />
               </div>
-              <Button type="submit">entrar</Button>
+              <div className="flex justify-center">
+                <Button type="submit">Entrar</Button>
+              </div>
             </form>
           </TabsContent>
 
           <TabsContent value="registrar">
-            <p>form de registrar</p>
-            <Button>registrar</Button>
+            <form action="" className="space-y-8 p-4">
+              <div>
+                <Label htmlFor="nome">Nome</Label>
+                <Input id="nome" />
+              </div>
+              <div>
+                <Label htmlFor="bio">Bio</Label>
+                <Input id="bio" />
+              </div>
+              <div>
+                <Label htmlFor="email">Email</Label>
+                <Input id="email" />
+              </div>
+              <div>
+                <Label htmlFor="senha">Senha</Label>
+                <Input id="senha" type="password" />
+              </div>
+              <div className="flex justify-center">
+                <Button type="submit">Criar conta</Button>
+              </div>
+            </form>
           </TabsContent>
-
         </Tabs>
-
       </section>
     </main>
   );
